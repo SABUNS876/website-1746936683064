@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Modern Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(101,105,161,0.3);
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+  }
+  header p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffdd57;
+  }
+  main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #2575fc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .about, .skills {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px -8px rgba(0,0,0,0.15);
+  }
+  .about p {
+    font-size: 1.1rem;
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .skill {
+    background: #2575fc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(37,117,252,0.5);
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37,117,252,0.7);
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .project-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px -10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+  }
+  .project-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+  .project-content {
+    padding: 1rem 1.5rem 1.8rem;
+    flex: 1;
+  }
+  .project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .project-links a {
+    text-decoration: none;
+    color: #2575fc;
+    font-weight: 600;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  .project-links a:hover {
+    color: #6a11cb;
+  }
+  footer {
+    text-align: center;
+    padding: 1.2rem 1rem;
+    background: #1e212d;
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      margin: 0 0.6rem;
+      font-size: 0.9rem;
+    }
+    main {
+      margin: 1.5rem 1rem 2rem;
+    }
+    .project-image {
+      height: 140px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>John Doe</h1>
+  <p>Creative Web Developer & Designer crafting modern, responsive websites & apps</p>
+  <nav aria-label="Primary">
+    <a href="#about" tabindex="0">About</a>
+    <a href="#skills" tabindex="0">Skills</a>
+    <a href="#projects" tabindex="0">Projects</a>
+    <a href="#contact" tabindex="0">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="about" class="about" tabindex="0" aria-label="About me">
+    <h2>About Me</h2>
+    <p>Hello! I'm John, a passionate web developer with a flair for turning ideas into elegant, efficient, and accessible digital experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating modern designs that look great on any device. I love learning new technologies and continuously improving my craft.</p>
+  </section>
+
+  <section id="skills" class="skills" tabindex="0" aria-label="My skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Vue.js</div>
+      <div class="skill">Tailwind CSS</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Accessibility</div>
+      <div class="skill">Webpack</div>
+    </div>
+  </section>
+
+  <section id="projects" tabindex="0" aria-label="My projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card" tabindex="0" aria-label="Project Portfolio Website">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Screenshot of Portfolio Website" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-description">A sleek personal portfolio website built with React and styled-components to showcase projects and blog posts.</p>
+          <div class="project-links">
+            <a href="https://github.com/johndoe/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://johndoe.dev" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="0" aria-label="Project Task Manager App">
+        <img src="https://images.unsplash.com/photo-1559027615-1372b6f6b9b0?auto=format&fit=crop&w=800&q=80" alt="Screenshot of Task Manager App" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Task Manager App</h3>
+          <p class="project-description">A modern, drag-and-drop task management app built with Vue.js and Vuex for state management.</p>
+          <div class="project-links">
+            <a href="https://github.com/johndoe/task-manager" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://tasks.johndoe.dev" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="0" aria-label="Project E-commerce Store">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Screenshot of E-commerce Store" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">E-commerce Store</h3>
+          <p class="project-description">An e-commerce storefront with product search, filters, and cart functionality, developed with React and Redux.</p>
+          <div class="project-links">
+            <a href="https://github.com/johndoe/ecommerce" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://shop.johndoe.dev" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="Contact me" style="max-width: 480px; margin: 0 auto;">
+    <h2>Contact</h2>
+    <form style="background:white; padding: 1.5rem; border-radius:12px; box-shadow: 0 8px 18px rgba(0,0,0,0.1);" onsubmit="event.preventDefault(); alert('Thank you for reaching out! I will get back to you soon.'); this.reset();">
+      <label for="name" style="display:block; margin-bottom:0.3rem; font-weight:600;">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Your name" style="width:100%; padding: 0.6rem 1rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius:8px; font-size: 1rem;" />
+      <label for="email" style="display:block; margin-bottom:0.3rem; font-weight:600;">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" style="width:100%; padding: 0.6rem 1rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius:8px; font-size: 1rem;" />
+      <label for="message" style="display:block; margin-bottom:0.3rem; font-weight:600;">Message</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Your message" style="width:100%; padding: 0.6rem 1rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius:8px; font-size: 1rem; resize: vertical;"></textarea>
+      <button type="submit" style="background: #2575fc; color:white; font-weight:700; padding: 0.8rem 1.6rem; border:none; border-radius: 25px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+    </form>
+  </section>
+</main>
+<footer tabindex="0" aria-label="Page footer">
+  <p>© 2024 John Doe. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+```
